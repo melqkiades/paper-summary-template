@@ -1,0 +1,162 @@
+% A book summary template inspired by Jan Küster's Left Sidebar CV / https://github.com/jankapunkt/latexcv
+
+\documentclass[11pt,a4paper]{article}	
+\usepackage[utf8]{inputenc}
+\usepackage[authoryear]{natbib}
+\usepackage{bibentry}
+\usepackage{progressbar}
+\usepackage{usebib}
+% \newbibfield{booktitle}
+\bibinput{bibliography}
+
+
+\usepackage[default]{raleway}
+
+% set font default
+\renewcommand*\familydefault{\sfdefault} 	
+\usepackage[T1]{fontenc}
+
+\usepackage{moresize}
+\usepackage{fontawesome}
+\usepackage{float}
+
+\usepackage{paracol}
+\usepackage[margin=1.5cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\setlength{\parindent}{0mm}
+\usepackage{graphicx}
+	
+\usepackage{tikz}				
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+
+\usepackage{transparent}
+\usepackage{color}
+
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{pifont}
+\usepackage{forloop}
+
+\newcounter{starnumber}
+\newcommand{\stars}[1]{
+  \forloop{starnumber}{1}{\value{starnumber} < 6}{
+    \ifthenelse{#1 < \value{starnumber}}{\ding{73}}{\ding{72}}%
+  }
+}
+
+\input{template/colors}
+
+% \definecolor{maincol}{RGB}{ 225, 0, 0 }
+\definecolor{darkcol}{RGB}{ 70, 70, 70 }
+\definecolor{lightcol}{RGB}{245,245,245}
+\colorlet{maincol}{bookcolor}
+% \colorlet{darkcol}{bookcolor}
+
+\usepackage{enumitem}
+\setitemize{label={\color{maincol}\faCheck}}
+
+\usepackage[hidelinks]{hyperref}
+\include{template/kuestercvelements}
+% \bibliography{bibliography}
+
+
+%============================================================================%
+\begin{document}
+\columnratio{0.31}
+\setlength{\columnsep}{2.2em}
+\setlength{\columnseprule}{4pt}
+\colseprulecolor{lightcol}
+\begin{paracol}{2}
+
+
+\heading{Overview}
+
+\small
+
+\newcommand{\paperkey}{Zhang2019}
+
+\icontext{Male}{12}{\citeauthor{\paperkey}}{black}\\[6pt]	
+\icontext{Book}{12}{}{black}\\[6pt]	
+% \icontext{MapMarker}{12}{NY}{black}\\[6pt]
+\icontext{Calendar}{12}{\citeyear{\paperkey}}{black}\\[6pt]
+% \icontext{Github}{12}{\href{}{-- --}}{black}\\[6pt]
+% \iconemail{Laptop}{12}{Book Website}{https://gregmckeown.com/book/}{black}\\[6pt]
+% \iconemail{Globe}{12}{Summary Source 1}{https://epigrammetry.hypotheses.org/595}{black}\\[6pt]
+% \iconemail{Globe}{12}{Summary Source 2}{https://epigrammetry.hypotheses.org/248}{black}\\[6pt]
+\icontext{Database}{12}{}{black}\\[6pt]
+\icontext{BarChart}{12}{}{black}\\[6pt]
+\icontext{Wrench}{12}{}{black}\\[6pt]
+\icontext{Bullseye}{12}{}{black}\\[6pt]
+\icontext{QuoteRight}{12}{-- --}{black}\\[6pt]
+% \icontext{Tachometer}{12}{\progressbar[filledcolor=bookcolor,emptycolor=bookcolor!20]{0.0}}{black}\\[6pt]
+% \icontext{Star}{12}{\stars{5}}{black}\\[6pt]
+\icontext{Star}{12}{\stars{0}}{black}\\[6pt]
+
+\vspace{3em}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics{essentialism-energy.png}
+%     \caption{Graph illustrating how far you can go with the same amount of energy if invested deliberately in just one thing versus diffusion}
+%     \label{fig:my_label}
+% \end{figure}
+
+
+\normalsize
+\switchcolumn
+
+% \titlebox{white}{darkcol}{
+\titlebox{white}{kthblue}{
+
+{\bf\large\usebibentry{\paperkey}{title}}  \\[4pt]
+\rule{0.1\textwidth}{1.25pt} \\[4pt]
+
+\citet{\paperkey}
+
+}
+\vspace{1em}
+
+%---------------------------------------------------------------------------------------
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=\linewidth]{images/\paperkey-image.pdf}
+\end{center}
+\end{figure}
+
+\heading{What did authors try to accomplish?}
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\heading{Key elements}
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\heading{What can you use yourself?}
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\heading{Thoughts}
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\heading{References to follow}
+
+% \begin{itemize}
+%     \item 
+% \end{itemize}
+
+
+\bibliographystyle{plainnat}
+% \bibliography{bibliography}
+\nobibliography{bibliography}
+
+\end{paracol}
+\end{document}
+
