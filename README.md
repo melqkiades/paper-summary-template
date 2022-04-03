@@ -34,7 +34,7 @@ For example
 
 The above YAML file will result in the following PDF:
 
-![Gu2018-summary](https://user-images.githubusercontent.com/7023350/161425654-00cb5c83-9997-431c-b4cc-425f5e9311ec.png)
+<kbd>![Gu2018-summary](https://user-images.githubusercontent.com/7023350/161425654-00cb5c83-9997-431c-b4cc-425f5e9311ec.png)</kbd>
 
 Note that the image of the model in the summary was loaded from the `Guo2018-image.pdf` file.
 
