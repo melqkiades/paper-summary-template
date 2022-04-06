@@ -45,7 +45,7 @@ Note that the image of the model in the summary was loaded from the `Guo2018-ima
 This template requires pandoc. To use it install pandoc and then run the following command:
 
 ```
-pandoc experiment.yaml --template experiment.latex --to latex -o experiment.tex
+.\run.sh
 ```
 
 Based on LaTeX Ninja's [Book summary template](https://github.com/latex-ninja/Book-Summary-Template).
