@@ -3,7 +3,7 @@ A template to summarize scientific papers.
 
 Use the YAML format to create a summary and generate a PDF from it.
 
-For example
+For example:
 
 ```
 paper:
@@ -41,5 +41,11 @@ The above YAML file will result in the following PDF:
 <kbd>![Gu2018-summary](https://user-images.githubusercontent.com/7023350/161425654-00cb5c83-9997-431c-b4cc-425f5e9311ec.png)</kbd>
 
 Note that the image of the model in the summary was loaded from the `Guo2018-image.pdf` file.
+
+This template requires pandoc. To use it install pandoc and then run the following command:
+
+```
+pandoc experiment.yaml --template experiment.latex --to latex -o experiment.tex
+```
 
 Based on LaTeX Ninja's [Book summary template](https://github.com/latex-ninja/Book-Summary-Template).
